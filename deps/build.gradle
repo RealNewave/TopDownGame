@@ -1,0 +1,10 @@
+buildscript { repositories { mavenLocal(); mavenCentral(); google(); gradlePluginPortal() } }
+plugins {
+  id("com.soywiz.kproject") version "0.3.1"
+}
+dependencies {
+}
+File extraGradle = file("build.extra.gradle")
+if (extraGradle.exists()) {
+    apply from: extraGradle
+}
